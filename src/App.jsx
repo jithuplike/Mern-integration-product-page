@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import Login from './components/Login'
+import React, {useState } from 'react'
+import Login from './components/login'
  import { BrowserRouter as Router,Routes,Route,Link,Navigate } from 'react-router-dom'
  import Home from './components/Home'
   
@@ -58,7 +58,7 @@ const App = () => {
    </Router>  
   )
 
-  function protectedRoute({isAuthenticated,children }){
+  function ProtectedRoute({isAuthenticated,children }){
     return isAuthenticated?children: <Navigate to="/Login"/>
 
   }
